@@ -1,4 +1,5 @@
 interface Education {
+  id: number;
   degree: string;
   institution: string;
   year: string;
@@ -7,6 +8,7 @@ interface Education {
 }
 
 interface Experience {
+  id: number;
   role: string;
   company: string;
   year: string;
@@ -16,6 +18,7 @@ interface Experience {
 
 export const education: Education[] = [
   {
+    id: 1,
     degree: "Postgraduate Degree in AI",
     institution: "Télécom Paris | Institut Polytechnique de Paris",
     year: "2023-Expected graduation on february 2025",
@@ -23,6 +26,7 @@ export const education: Education[] = [
     logoUrl: "https://s3-eu-west-1.amazonaws.com/assets.atout-on-line.com/images/ingenieur/Fiches_Ecoles/telecom_paristech.jpg"
   },
   {
+    id: 2,
     degree: "Postgraduate Degree in AI",
     institution: "ENSTA Paris | Institut Polytechnique de Paris",
     year: "2023-Expected graduation on february 2025",
@@ -30,6 +34,7 @@ export const education: Education[] = [
     logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Logo_ENSTA_Paris.jpg/90px-Logo_ENSTA_Paris.jpg"
   },
   {
+    id: 3,
     degree: "Computer Science Engineering Degree",  
     institution: "National Institute of Applied Science and Technology (INSAT)",
     year: "2017-2022",
@@ -40,6 +45,7 @@ export const education: Education[] = [
 
 export const experience: Experience[] = [
   {
+    id: 1,
     role: "Machine Learning Intern",
     company: "EagleAI",
     year: "2024-2024",
@@ -47,6 +53,7 @@ export const experience: Experience[] = [
     logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPtTerBm_qlNTVA9CKz1e6cL5rTCiG68BNxg&s"
   },
   {
+    id: 2,
     role: "Artificial Intelligence Intern",
     company: "Polytechnique Montréal",
     year: "2022-2022",
@@ -54,6 +61,7 @@ export const experience: Experience[] = [
     logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxGIPUUydQd7KsbnzcIFOuYRkkV2VUk8k6Q&s"
   },
   {
+    id: 3,
     role: "Machine Learning Intern",
     company: "Professional Management Consulting (PMC)",
     year: "2018-2020",

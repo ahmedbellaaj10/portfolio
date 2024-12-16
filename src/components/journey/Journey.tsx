@@ -25,7 +25,7 @@ export default function Journey() {
             <div className="space-y-8 stagger">
               {education.map((edu) => (
                 <JourneyItem
-                  key={edu.degree}
+                  key={edu.id}
                   title={edu.degree}
                   organization={edu.institution}
                   year={edu.year}
@@ -44,7 +44,7 @@ export default function Journey() {
             <div className="space-y-8 stagger">
               {experience.map((exp) => (
                 <JourneyItem
-                  key={exp.role}
+                  key={exp.id}
                   title={exp.role}
                   organization={exp.company}
                   year={exp.year}
