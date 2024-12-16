@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="animate-float">
           {/* <Brain className="h-20 w-20 text-accent-primary mx-auto mb-8" />*/}
           <center>
-            <img src="/media/logo_transparent - Copie.png" alt="Logo" className="h-32 w-160" />
+            <img src="./media/logo_transparent - Copie.png" alt="Logo" className="h-32 w-160" />
           </center>  
         </div>
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent animate-gradient">
@@ -31,7 +31,7 @@ export default function Hero() {
             Get in Touch
           </a>
           <a 
-            href="/media/ahmed-belaaj-cv.pdf" 
+            href="./media/ahmed-belaaj-cv.pdf" 
             download
             className="btn bg-dark-100 border-2 border-accent-primary hover:bg-accent-primary/10 transition-all duration-300 group"
           >
