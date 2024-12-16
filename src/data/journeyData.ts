@@ -21,7 +21,7 @@ export const education: Education[] = [
     id: 1,
     degree: "Postgraduate Degree in AI",
     institution: "Télécom Paris | Institut Polytechnique de Paris",
-    year: "2023-Expected graduation on february 2025",
+    year: "2023-Expected graduation on February 2025",
     description: "Specialized in Artificial Intelligence and Deep Learning",
     logoUrl: "https://s3-eu-west-1.amazonaws.com/assets.atout-on-line.com/images/ingenieur/Fiches_Ecoles/telecom_paristech.jpg"
   },
@@ -29,7 +29,7 @@ export const education: Education[] = [
     id: 2,
     degree: "Postgraduate Degree in AI",
     institution: "ENSTA Paris | Institut Polytechnique de Paris",
-    year: "2023-Expected graduation on february 2025",
+    year: "2023-Expected graduation on February 2025",
     description: "Focused on robotics and Deep Learning",
     logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Logo_ENSTA_Paris.jpg/90px-Logo_ENSTA_Paris.jpg"
   },
