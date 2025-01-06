@@ -8,11 +8,11 @@ interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    content: "Ahmed's expertise in machine learning and data science helped us implement cutting-edge solutions that transformed our business processes. His ability to translate complex technical concepts into actionable insights is remarkable.",
-    author: "Sarah Johnson",
-    role: "CTO",
-    company: "TechCorp Solutions",
-    avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100"
+    content: "Ahmed demonstrated exceptional interest in the project topic and quickly acquired the theoretical knowledge necessary to excel. Throughout his internship at EagleAI, he consistently displayed passion, a strong willingness to learn, and an eagerness to contribute to every aspect of the project. His dedication and enthusiasm were evident as he significantly enhanced both his coding skills and research capabilities. Ahmed's commitment to personal and professional growth has been truly commendable, making him a valuable asset to the team.",
+    author: "Andrei Plekhanov",
+    role: "Senior Data Scientist",
+    company: "EagleAI",
+    avatarUrl: "./media/apl.jpg"
   },
   {
     content: "Working with Ahmed was an exceptional experience. His deep understanding of AI and dedication to delivering high-quality solutions made him an invaluable asset to our research team.",
