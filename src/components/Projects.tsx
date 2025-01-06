@@ -25,7 +25,7 @@ const projects = [
     description: 'Instagram clone that enable user to generate and post images based on a prompt.',
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000',
     tags: ['Python', 'Modal', 'React', 'Vercel'],
-    github: 'https://github.com/ahmedbellaaj10/pentagram-backend',
+    github: 'https://github.com/ahmedbellaaj10/pentagram-ui',
     demo: 'https://demo.com'
   }
 ];
