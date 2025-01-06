@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: 'Eval-IQ - LLM Evaluation Platform',
-    description: 'End-to-end platefrom to test LLMs on different test cases and benchmark them based on IQ aspects.',
+    description: 'End-to-end platefrom to test LLMs on different test cases and evaluate them based on IQ aspects.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
     tags: ['NextJS', 'LLMs', 'PostgreSQL'],
     github: 'https://github.com/ahmedbellaaj10/eval-iq',
