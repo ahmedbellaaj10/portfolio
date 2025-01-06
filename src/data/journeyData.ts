@@ -46,6 +46,14 @@ export const education: Education[] = [
 export const experience: Experience[] = [
   {
     id: 1,
+    role: "AI & Software Engineering Residant",
+    company: "Headstarter",
+    year: "2024-now",
+    description: "Building 14+ machine learning, AI engineering and full-stack projects in fast-paced software team environments",
+    logoUrl: "https://yt3.googleusercontent.com/yVrp0PYBekgWMRoUfQ5KLnQ5GuRj2rxQVeNNyZr_YaFPP82jK2vOJPKdWHWnvFcAoqn8iLFmrw=s900-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    id: 2,
     role: "Machine Learning Intern",
     company: "EagleAI",
     year: "2024-2024",
@@ -53,7 +61,7 @@ export const experience: Experience[] = [
     logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPtTerBm_qlNTVA9CKz1e6cL5rTCiG68BNxg&s"
   },
   {
-    id: 2,
+    id: 3,
     role: "Artificial Intelligence Intern",
     company: "Polytechnique Montréal",
     year: "2022-2022",
@@ -61,7 +69,7 @@ export const experience: Experience[] = [
     logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxGIPUUydQd7KsbnzcIFOuYRkkV2VUk8k6Q&s"
   },
   {
-    id: 3,
+    id: 4,
     role: "Machine Learning Intern",
     company: "Professional Management Consulting (PMC)",
     year: "2018-2020",

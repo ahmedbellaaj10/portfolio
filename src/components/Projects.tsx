@@ -1,29 +1,31 @@
 import { Github, ExternalLink } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
+const baseURL = import.meta.env.VITE_BASE_URL;
+
 const projects = [
   {
-    title: 'AI-Powered Image Recognition',
-    description: 'Deep learning model for real-time object detection and classification using TensorFlow.',
+    title: 'BrainScan - Brain Tumor MRI Classification',
+    description: 'Deep learning model to detect brain tumors from MRI images.',
     image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1000',
-    tags: ['TensorFlow', 'Computer Vision', 'Deep Learning'],
-    github: 'https://github.com',
-    demo: 'https://demo.com'
+    tags: ['Pytorch', 'Computer Vision', 'Deep Learning', 'Streamlit'],
+    github: 'https://github.com/ahmedbellaaj10/BrainScan',
+    demo: `${baseURL}/#projects`
   },
   {
-    title: 'Natural Language Processing Pipeline',
-    description: 'End-to-end NLP system for sentiment analysis and text classification.',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000',
-    tags: ['PyTorch', 'NLP', 'BERT'],
-    github: 'https://github.com',
-    demo: 'https://demo.com'
-  },
-  {
-    title: 'Predictive Analytics Dashboard',
-    description: 'Interactive dashboard for time series forecasting and anomaly detection.',
+    title: 'Eval-IQ - LLM Evaluation Platform',
+    description: 'End-to-end platefrom to test LLMs on different test cases and benchmark them based on IQ aspects.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
-    tags: ['Python', 'Streamlit', 'Prophet'],
-    github: 'https://github.com',
+    tags: ['NextJS', 'LLMs', 'PostgreSQL'],
+    github: 'https://github.com/ahmedbellaaj10/eval-iq',
+    demo: 'https://demo.com'
+  },
+  {
+    title: 'Pentagram - Instagram like AI-generated images platform',
+    description: 'Instagram clone that enable user to generate and post images based on a prompt.',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000',
+    tags: ['Python', 'Modal', 'React', 'Vercel'],
+    github: 'https://github.com/ahmedbellaaj10/pentagram-backend',
     demo: 'https://demo.com'
   }
 ];
@@ -84,8 +86,8 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex items-center text-gray-400 hover:text-accent-primary transition-colors"
                   >
-                    <ExternalLink className="h-5 w-5 mr-1" />
-                    <span>Demo</span>
+                    {/* <ExternalLink className="h-5 w-5 mr-1" />
+                    <span>Demo</span> */}
                   </a>
                 </div>
               </div>
