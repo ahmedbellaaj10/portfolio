@@ -46,7 +46,7 @@ export const education: Education[] = [
 export const experience: Experience[] = [
   {
     id: 1,
-    role: "AI & Software Engineering Residant",
+    role: "AI & Software Engineering Resident",
     company: "Headstarter",
     year: "2024-now",
     description: "Building 14+ machine learning, AI engineering and full-stack projects in fast-paced software team environments",
