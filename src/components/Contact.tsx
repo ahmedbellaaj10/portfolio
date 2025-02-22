@@ -136,7 +136,7 @@ export default function Contact() {
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300">
+                <label htmlFor="message" className="mt-1 ml-1 block text-sm font-medium text-gray-300">
                   Message
                 </label>
                 <textarea
