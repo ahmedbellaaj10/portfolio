@@ -179,7 +179,7 @@ export default function Contact() {
               <Phone className="h-6 w-6 text-accent-primary" />
               <div>
                 <h3 className="text-lg font-medium text-white">Phone</h3>
-                <p className="text-gray-400">+33 7 44 40 45 07</p>
+                <p className="text-gray-400">+33 7 44 40 45 01</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
