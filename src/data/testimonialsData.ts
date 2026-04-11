@@ -1,3 +1,5 @@
+import { PATHS } from '../config/paths';
+
 interface Testimonial {
   content: string;
   author: string;
@@ -12,7 +14,7 @@ export const testimonials: Testimonial[] = [
     author: "Andrei Plekhanov",
     role: "Senior Data Scientist",
     company: "EagleAI",
-    avatarUrl: "./media/apl.jpg"
+    avatarUrl: PATHS.testimonials('apl.jpg')
   }
   // {
   //   content: "Working with Ahmed was an exceptional experience. His deep understanding of AI and dedication to delivering high-quality solutions made him an invaluable asset to our research team.",

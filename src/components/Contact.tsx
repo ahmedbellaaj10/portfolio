@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Mail, MapPin, Phone, FileDown } from "lucide-react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import emailjs from "emailjs-com";
+import { PATHS } from "../config/paths";
 
 export default function Contact() {
   const sectionRef = useScrollReveal();
@@ -87,7 +88,7 @@ export default function Contact() {
             Let’s discuss how we can work together on your next data project!
           </p>
           <a
-            href="./media/ahmed-belaaj-cv.pdf"
+            href={PATHS.shared.resume}
             download
             className="inline-flex items-center px-6 py-3 mt-8 bg-dark-100 border-2 border-accent-primary text-white rounded-lg hover:bg-accent-primary/10 transition-all duration-300 group"
           >

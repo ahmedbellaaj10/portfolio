@@ -1,5 +1,6 @@
 import { Brain, BookOpen } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { PATHS } from '../config/paths';
 
 export default function Introduction() {
   const sectionRef = useScrollReveal();
@@ -27,7 +28,7 @@ export default function Introduction() {
           <div className="relative flex justify-center">
             <div className="w-64 h-64 rounded-full overflow-hidden shadow-xl ring-4 ring-accent-primary/20 hover:ring-accent-primary transition-all duration-300 transform hover:scale-105">
               <img 
-                src="./media/ahmed-belaaj.jpeg" 
+                src={PATHS.introduction('ahmed-belaaj.jpeg')} 
                 alt="Ahmed BELAAJ"
                 className="w-full h-full object-cover"
               />

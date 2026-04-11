@@ -1,6 +1,7 @@
 import { Menu, X, Linkedin } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
+import { PATHS } from '../config/paths';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             {/* <Brain className="h-8 w-8 text-accent-primary" /> */}
-            <img src="./media/logo-header.png" alt="Logo" className="h-16 w-160" />
+            <img src={PATHS.navbar('logo-header.png')} alt="Logo" className="h-16 w-160" />
             <span className="ml-2 text-xl font-bold text-white">Ahmed BELAAJ</span> 
           </div>
           
