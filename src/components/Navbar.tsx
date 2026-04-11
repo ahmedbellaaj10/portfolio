@@ -1,4 +1,5 @@
-import { Menu, X, Brain, Github, Linkedin } from 'lucide-react';
+import { Menu, X, Linkedin } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
@@ -49,7 +50,7 @@ export default function Navbar() {
               <div className="flex space-x-2">
                 <a href="https://github.com/ahmedbellaaj10" target="_blank" rel="noopener noreferrer" 
                    className="text-gray-300 hover:text-accent-primary transition-colors">
-                  <Github className="h-5 w-5" />
+                  <FaGithub className="h-5 w-5" />
                 </a>
                 <a href="https://www.linkedin.com/in/ahmed-bellaaj/" target="_blank" rel="noopener noreferrer" 
                    className="text-gray-300 hover:text-accent-primary transition-colors">

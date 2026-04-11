@@ -1,4 +1,4 @@
-import { Brain, Award, BookOpen } from 'lucide-react';
+import { Brain, BookOpen } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export default function Introduction() {

@@ -1,4 +1,4 @@
-import { Github, ExternalLink } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const baseURL = import.meta.env.VITE_BASE_URL;
@@ -77,7 +77,7 @@ export default function Projects() {
                     rel="noopener noreferrer" 
                     className="flex items-center text-gray-400 hover:text-accent-primary transition-colors"
                   >
-                    <Github className="h-5 w-5 mr-1" />
+                    <FaGithub className="h-5 w-5 mr-1" />
                     <span>Code</span>
                   </a>
                   <a 

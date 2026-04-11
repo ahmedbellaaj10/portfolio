@@ -1,4 +1,4 @@
-import { Brain, ChevronDown, FileDown } from 'lucide-react';
+import { ChevronDown, FileDown } from 'lucide-react';
 
 export default function Hero() {
   const scrollToNextSection = () => {
