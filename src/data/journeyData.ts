@@ -33,7 +33,7 @@ export const education: Education[] = [
     institution: "ENSTA Paris | Institut Polytechnique de Paris",
     year: "2023-2025",
     description: "Focused on robotics and Deep Learning",
-    logoUrl: PATHS.journey.education('ENSTA-ip-paris.png')
+    logoUrl: PATHS.journey.education('ensta-paris.png')
   },
   {
     id: 3,
