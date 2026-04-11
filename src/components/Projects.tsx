@@ -1,21 +1,24 @@
 import { FaGithub } from 'react-icons/fa';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { PATHS } from '../config/paths';
 
-const baseURL = import.meta.env.VITE_BASE_URL;
+const getProjectImagePath = (fileName: string) => PATHS.projects(fileName);
 
 const projects = [
   {
     title: 'BrainScan - Brain Tumor MRI Classification',
     description: 'Deep learning model to detect brain tumors from MRI images.',
-    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1000',
+    image: getProjectImagePath('brainscan.jpg'),
+    fallbackImage: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1000',
     tags: ['Pytorch', 'Computer Vision', 'Deep Learning', 'Streamlit'],
     github: 'https://github.com/ahmedbellaaj10/BrainScan',
-    demo: `${baseURL}/#projects`
+    demo: `${PATHS.base}#projects`
   },
   {
     title: 'Eval-IQ - LLM Evaluation Platform',
     description: 'End-to-end platefrom to test LLMs on different test cases and evaluate them based on IQ aspects.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
+    image: getProjectImagePath('eval-iq.jpg'),
+    fallbackImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
     tags: ['NextJS', 'LLMs', 'PostgreSQL'],
     github: 'https://github.com/ahmedbellaaj10/eval-iq',
     demo: 'https://demo.com'
@@ -23,7 +26,8 @@ const projects = [
   {
     title: 'Pentagram - Instagram like AI-generated images platform',
     description: 'Instagram clone that enable user to generate and post images based on a prompt.',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000',
+    image: getProjectImagePath('pentagram-ui.jpg'),
+    fallbackImage: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000',
     tags: ['Python', 'Modal', 'React', 'Vercel'],
     github: 'https://github.com/ahmedbellaaj10/pentagram-ui',
     demo: 'https://demo.com'
@@ -52,8 +56,17 @@ export default function Projects() {
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={project.image} 
+                  data-fallback={project.fallbackImage}
                   alt={project.title}
                   className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+                  onError={(event) => {
+                    const imageElement = event.currentTarget;
+                    const fallbackImage = imageElement.dataset.fallback;
+
+                    if (fallbackImage && imageElement.src !== fallbackImage) {
+                      imageElement.src = fallbackImage;
+                    }
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-100 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
               </div>
