@@ -1,5 +1,5 @@
-import { Menu, X, Linkedin } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
+import { Menu, X } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { PATHS } from '../config/paths';
 
@@ -55,7 +55,7 @@ export default function Navbar() {
                 </a>
                 <a href="https://www.linkedin.com/in/ahmed-bellaaj/" target="_blank" rel="noopener noreferrer" 
                    className="text-gray-300 hover:text-accent-primary transition-colors">
-                  <Linkedin className="h-5 w-5" />
+                  <FaLinkedin className="h-5 w-5" />
                 </a>
               </div>
             </div>
