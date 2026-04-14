@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Mail, MapPin, Phone, FileDown } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import emailjs from "emailjs-com";
-import { PATHS } from "../config/paths";
+import ResumeDownloadButton from "./ResumeDownloadButton";
 
 export default function Contact() {
   const sectionRef = useScrollReveal();
@@ -87,14 +87,10 @@ export default function Contact() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Let’s discuss how we can work together on your next data project!
           </p>
-          <a
-            href={PATHS.shared.resume}
-            download
+          <ResumeDownloadButton
+            label="Download My CV"
             className="inline-flex items-center px-6 py-3 mt-8 bg-dark-100 border-2 border-accent-primary text-white rounded-lg hover:bg-accent-primary/10 transition-all duration-300 group"
-          >
-            <FileDown className="h-5 w-5 mr-2 group-hover:animate-bounce" />
-            Download My CV
-          </a>
+          />
         </div>
 
         {/* Contact Form and Details */}

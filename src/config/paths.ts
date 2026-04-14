@@ -26,6 +26,9 @@ export const PATHS = {
   },
   testimonials: (...segments: string[]) => mediaPath('data', 'testimonials', ...segments),
   shared: {
-    resume: mediaPath('ahmed-belaaj-cv.pdf'),
+    resumes: {
+      en: mediaPath('ahmed-belaaj-cv-en.pdf'),
+      fr: mediaPath('ahmed-belaaj-cv-fr.pdf'),
+    },
   },
 };

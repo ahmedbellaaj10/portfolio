@@ -1,5 +1,6 @@
-import { ChevronDown, FileDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { PATHS } from '../config/paths';
+import ResumeDownloadButton from './ResumeDownloadButton';
 
 export default function Hero() {
   const scrollToNextSection = () => {
@@ -31,14 +32,10 @@ export default function Hero() {
           <a href="#contact" className="btn bg-transparent border-2 border-accent-primary hover:bg-accent-primary/10 transition-all duration-300">
             Get in Touch
           </a>
-          <a 
-            href={PATHS.shared.resume}
-            download
+          <ResumeDownloadButton
+            label="Download CV"
             className="btn bg-dark-100 border-2 border-accent-primary hover:bg-accent-primary/10 transition-all duration-300 group"
-          >
-            <FileDown className="h-5 w-5 mr-2 group-hover:animate-bounce" />
-            Download CV
-          </a>
+          />
         </div>
       </div>
       <button 
