@@ -20,10 +20,10 @@ export default function Hero() {
           </center>  
         </div>
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent animate-gradient">
-          Data Science & AI Engineering
+          AI Engineer & Data Scientist
         </h1>
         <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-          Transforming complex data into actionable insights through machine learning and artificial intelligence
+          I help teams build ML & GenAI applications that ship
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a href="#projects" className="btn bg-accent-primary hover:bg-accent-secondary transition-all duration-300">
