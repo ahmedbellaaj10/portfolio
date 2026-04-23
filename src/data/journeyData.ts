@@ -46,8 +46,16 @@ export const education: Education[] = [
 ];
 
 export const experience: Experience[] = [
-  {
+    {
     id: 1,
+    role: "Data Scientist & AI Engineer",
+    company: "Polycea",
+    year: "Sep 2025 - Now",
+    description: "Driving production-grade LLM deployments. Engineered a near real-time data anonymization system that increased detection coverage to 87%. Led the sizing and deployment of highly secure, air-gapped vLLM infrastructures on specialized Nvidia H200 clusters.",
+    logoUrl: PATHS.journey.experience('polycea.jpg')
+  },
+  {
+    id: 2,
     role: "Artificial Intelligence and Full-stack Engineer",
     company: "Headstarter",
     year: "Dec 2024 - May 2025",
@@ -55,15 +63,15 @@ export const experience: Experience[] = [
     logoUrl: PATHS.journey.experience('headstarter.jpg')
   },
   {
-    id: 2,
+    id: 3,
     role: "Machine Learning Intern",
     company: "EagleAI",
-    year: "Jul 2024 - Dec2024",
+    year: "Jul 2024 - Dec 2024",
     description: "I designed a 47M-parameter transformer model and built its full training pipeline so the R&D team could train on 200GB of retail data 6× faster and deploy at scale on Vertex AI",
     logoUrl: PATHS.journey.experience('eagle-ai.jpg')
   },
   {
-    id: 3,
+    id: 4,
     role: "Artificial Intelligence Intern",
     company: "Polytechnique Montréal",
     year: "Mar 2022 - Sep 2022",
@@ -71,7 +79,7 @@ export const experience: Experience[] = [
     logoUrl: PATHS.journey.experience('poly-mtl.png')
   },
   {
-    id: 4,
+    id: 5,
     role: "Machine Learning Intern",
     company: "Professional Management Consulting (PMC)",
     year: "Jul 2021 - Aug 2021",

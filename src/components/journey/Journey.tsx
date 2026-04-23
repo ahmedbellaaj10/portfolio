@@ -1,4 +1,4 @@
-import { GraduationCap, Briefcase, Award } from 'lucide-react';
+import { GraduationCap, Briefcase } from 'lucide-react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import JourneyItem from './JourneyItem';
 import { education, experience } from '../../data/journeyData';
@@ -12,7 +12,7 @@ export default function Journey() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">My Journey</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A timeline of my academic and professional achievements
+            A timeline of my academic and professional journey
           </p>
         </div>
 
