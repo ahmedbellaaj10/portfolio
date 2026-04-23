@@ -1,16 +1,26 @@
-import { Brain, Database, LineChart, Network, Code, Share2 } from 'lucide-react';
+import { Brain, LineChart, Network, Code, Sparkles, Bot } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const expertiseAreas = [
   {
     icon: Brain,
     title: 'Machine Learning',
-    description: 'Deep learning, neural networks, and advanced ML algorithms for complex problem-solving.'
+    description: 'Supervised and unsupervised learning, feature engineering, and model evaluation for structured data problems.'
   },
   {
-    icon: Database,
-    title: 'Big Data Analytics',
-    description: 'Processing and analyzing large-scale datasets using modern big data technologies.'
+    icon: Network,
+    title: 'Deep Learning',
+    description: 'Transformer and CNN architectures, training optimization, and fine-tuning for vision and language tasks.'
+  },
+  {
+    icon: Sparkles,
+    title: 'Generative AI',
+    description: 'Prompting, RAG pipelines, and deploying production-grade LLMs across text, code, and multimodal tasks.'
+  },
+  {
+    icon: Bot,
+    title: 'AI Agents',
+    description: 'Designing autonomous agent loops, tool-use systems, and multi-agent orchestration frameworks.'
   },
   {
     icon: LineChart,
@@ -18,19 +28,9 @@ const expertiseAreas = [
     description: 'Advanced statistical modeling and hypothesis testing for data-driven decisions.'
   },
   {
-    icon: Network,
-    title: 'Deep Learning',
-    description: 'Designing and implementing neural networks for computer vision and NLP tasks.'
-  },
-  {
     icon: Code,
     title: 'MLOps',
     description: 'Building and deploying scalable ML pipelines and maintaining production systems.'
-  },
-  {
-    icon: Share2,
-    title: 'Data Visualization',
-    description: 'Creating interactive dashboards and meaningful visual representations of data.'
   }
 ];
 
