@@ -55,21 +55,16 @@ export default function ResumeDownloadButton({ label, className }: ResumeDownloa
   const dialogTitleId = useId();
 
   useEffect(() => {
-    if (!isDialogOpen) {
-      return undefined;
-    }
+    if (!isDialogOpen) return undefined;
 
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setIsDialogOpen(false);
-      }
+      if (event.key === 'Escape') setIsDialogOpen(false);
     };
 
     window.addEventListener('keydown', handleKeyDown);
-
     return () => {
       document.body.style.overflow = originalOverflow;
       window.removeEventListener('keydown', handleKeyDown);
@@ -89,7 +84,7 @@ export default function ResumeDownloadButton({ label, className }: ResumeDownloa
   return (
     <>
       <button type="button" onClick={() => setIsDialogOpen(true)} className={className}>
-        <FileDown className="h-5 w-5 mr-2 group-hover:animate-bounce" />
+        <FileDown className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
         {label}
       </button>
 
@@ -102,78 +97,67 @@ export default function ResumeDownloadButton({ label, className }: ResumeDownloa
             role="dialog"
             aria-modal="true"
             aria-labelledby={dialogTitleId}
-            className="glass-effect w-full max-w-md rounded-2xl border border-accent-primary/20 bg-dark-100/95 p-6 shadow-2xl"
-            onClick={(event) => event.stopPropagation()}
+            className="w-full max-w-md bg-dark-100 rounded-lg border border-accent-primary/20 p-6 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative">
+            {/* Header */}
+            <div className="flex items-center justify-between mb-6">
+              <h3 id={dialogTitleId} className="text-xl font-semibold text-white">
+                Choose your resume language
+              </h3>
               <button
                 type="button"
                 onClick={() => setIsDialogOpen(false)}
-                className="absolute right-0 top-0 z-10 rounded-full border border-white/10 p-2 text-gray-300 transition-colors hover:text-white"
-                aria-label="Close resume language dialog"
+                className="rounded-lg border border-accent-primary/20 p-2 text-gray-300
+                  hover:text-white hover:border-accent-primary transition-all duration-300"
+                aria-label="Close"
               >
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4" />
               </button>
-              <div className="text-center">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent-primary/80">
-                  Resume Download
-                </p>
-                <h3 id={dialogTitleId} className="mt-4 text-2xl font-semibold text-white">
-                  Choose your resume language
-                </h3>
-              </div>
             </div>
 
+            {/* Language picker */}
             <form
-              className="mt-8 space-y-4"
-              onSubmit={(event) => {
-                event.preventDefault();
-                handleDownload();
-              }}
+              className="space-y-4"
+              onSubmit={(e) => { e.preventDefault(); handleDownload(); }}
             >
               <fieldset>
                 <legend className="sr-only">Resume language</legend>
                 <div className="space-y-3">
                   {(['en', 'fr'] as ResumeLanguage[]).map((language) => {
                     const checked = selectedLanguage === language;
-
                     return (
                       <label
                         key={language}
-                        className={`flex cursor-pointer items-center justify-between rounded-xl border px-4 py-4 transition-all duration-300 ${
+                        className={`flex cursor-pointer items-center justify-between rounded-lg border px-4 py-4 transition-all duration-300 ${
                           checked
                             ? 'border-accent-primary bg-accent-primary/10 text-white'
-                            : 'border-white/10 bg-dark-300/80 text-gray-300 hover:border-accent-primary/40'
+                            : 'border-accent-primary/20 bg-dark-300 text-gray-300 hover:border-accent-primary'
                         }`}
                       >
                         <span className="flex items-center gap-3">
                           {resumeFlags[language]}
-                          <span className="text-base font-medium leading-tight">{resumeLabels[language]}</span>
+                          <span className="text-base font-medium">{resumeLabels[language]}</span>
                         </span>
-                        <span className="flex items-center gap-3">
-                          <span className="text-xs uppercase tracking-[0.2em] text-accent-primary/80">
-                            {language}
-                          </span>
-                          <input
-                            type="radio"
-                            name="resume-language"
-                            value={language}
-                            checked={checked}
-                            onChange={() => setSelectedLanguage(language)}
-                            className="h-4 w-4 border-gray-500 bg-dark-300 text-accent-primary focus:ring-accent-primary"
-                          />
-                        </span>
+                        <input
+                          type="radio"
+                          name="resume-language"
+                          value={language}
+                          checked={checked}
+                          onChange={() => setSelectedLanguage(language)}
+                          className="h-4 w-4 border-gray-500 bg-dark-300 text-accent-primary focus:ring-accent-primary"
+                        />
                       </label>
                     );
                   })}
                 </div>
               </fieldset>
 
-              <div className="flex flex-col-reverse gap-3 pt-4 sm:flex-row sm:justify-end">
+              <div className="flex flex-col-reverse gap-3 pt-2 sm:flex-row sm:justify-end">
                 <button
                   type="button"
                   onClick={() => setIsDialogOpen(false)}
-                  className="inline-flex items-center justify-center rounded-md border border-white/10 px-4 py-3 text-sm font-medium text-gray-200 transition-colors hover:bg-white/5"
+                  className="inline-flex items-center justify-center rounded-md border border-accent-primary/20 px-4 py-2.5 text-sm font-medium text-gray-300 hover:border-accent-primary hover:text-white transition-all duration-300"
                 >
                   Cancel
                 </button>

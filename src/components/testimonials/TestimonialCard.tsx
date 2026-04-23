@@ -8,7 +8,7 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ content, author, role, company, avatarUrl }: TestimonialCardProps) {
   return (
-    <div className="bg-dark-100 p-8 rounded-lg border border-accent-primary/20 hover:border-accent-primary transition-all duration-300 flex flex-col h-full group">
+    <div className="bg-dark-100 p-8 rounded-lg border border-accent-primary/20 hover:border-accent-primary hover:-translate-y-2 hover:shadow-lg hover:shadow-accent-primary/5 transition-all duration-300 flex flex-col h-full group">
       <div className="flex-grow">
         <div className="relative mb-6">
           <div className="absolute -top-4 -left-2 text-6xl text-accent-primary opacity-20 font-serif">"</div>
@@ -19,7 +19,7 @@ export default function TestimonialCard({ content, author, role, company, avatar
       </div>
       
       <div className="flex items-center mt-6 gap-4">
-        <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent-primary/20 group-hover:border-accent-primary transition-colors">
+        <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent-primary/20 group-hover:border-accent-primary transition-colors duration-300">
           <img 
             src={avatarUrl} 
             alt={author} 
@@ -27,7 +27,7 @@ export default function TestimonialCard({ content, author, role, company, avatar
           />
         </div>
         <div>
-          <h4 className="text-white font-semibold group-hover:text-accent-primary transition-colors">{author}</h4>
+          <h4 className="text-white font-semibold group-hover:text-accent-primary transition-colors duration-300">{author}</h4>
           <p className="text-gray-400 text-sm">{role}</p>
           <p className="text-accent-primary text-sm">{company}</p>
         </div>

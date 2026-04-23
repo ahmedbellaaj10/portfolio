@@ -51,7 +51,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="group bg-dark-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-primary/20 hover:border-accent-primary hover:-translate-y-2"
+              className="group bg-dark-100 rounded-lg overflow-hidden transition-all duration-300 border border-accent-primary/20 hover:border-accent-primary hover:-translate-y-2 hover:shadow-lg hover:shadow-accent-primary/5"
             >
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -71,7 +71,7 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-100 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-accent-primary transition-colors">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-accent-primary transition-colors duration-300">{project.title}</h3>
                 <p className="text-gray-400 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
@@ -88,7 +88,7 @@ export default function Projects() {
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center text-gray-400 hover:text-accent-primary transition-colors"
+                    className="flex items-center text-gray-400 hover:text-accent-primary transition-colors duration-300"
                   >
                     <FaGithub className="h-5 w-5 mr-1" />
                     <span>Code</span>
@@ -97,7 +97,7 @@ export default function Projects() {
                     href={project.demo} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center text-gray-400 hover:text-accent-primary transition-colors"
+                    className="flex items-center text-gray-400 hover:text-accent-primary transition-colors duration-300"
                   >
                     {/* <ExternalLink className="h-5 w-5 mr-1" />
                     <span>Demo</span> */}

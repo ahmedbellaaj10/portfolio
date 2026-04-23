@@ -51,10 +51,10 @@ export default function Expertise() {
           {expertiseAreas.map((area, index) => (
             <div 
               key={index} 
-              className="group p-6 bg-dark-100 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-accent-primary/20 hover:border-accent-primary hover:-translate-y-2"
+              className="group p-6 bg-dark-100 rounded-lg transition-all duration-300 border border-accent-primary/20 hover:border-accent-primary hover:-translate-y-2 hover:shadow-lg hover:shadow-accent-primary/5"
             >
               <area.icon className="h-12 w-12 text-accent-primary mb-4 transform transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-accent-primary transition-colors">{area.title}</h3>
+              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-accent-primary transition-colors duration-300">{area.title}</h3>
               <p className="text-gray-400 transition-colors duration-300 group-hover:text-gray-300">{area.description}</p>
             </div>
           ))}

@@ -15,7 +15,7 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 stagger">
           {skillsData.map((category) => (
             <SkillCategory
               key={category.name}
