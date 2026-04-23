@@ -1,4 +1,3 @@
-import { SVGProps } from 'react';
 import * as SimpleIcons from 'simple-icons';
 
 interface TechIconProps {
